@@ -1,0 +1,21 @@
+name: orthofinder
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - blast=2.12.0=hf3cf87c_4
+  - bzip2=1.0.8=h7f98852_4
+  - diamond=2.0.15=hb97b32f_0
+  - fastme=2.1.6.1=hec16e2b_1
+  - fasttree=2.1.11=hec16e2b_1
+  - iqtree=2.2.0.3=hb97b32f_0
+  - mafft=7.505=hec16e2b_0
+  - mcl=14.137=pl5321hec16e2b_8
+  - mmseqs2=13.45111=pl5321hf1761c0_2
+  - muscle=5.1=h9f5acd7_1
+  - numpy=1.22.3=py310h4ef5377_2
+#  - orthofinder=2.5.4=hdfd78af_0
+  - python=3.10.4=h2660328_0_cpython
+  - raxml=8.2.12=hec16e2b_4
+  - raxml-ng=1.1.0=h22e3c99_1
+  - scipy=1.8.0=py310hea5193d_1

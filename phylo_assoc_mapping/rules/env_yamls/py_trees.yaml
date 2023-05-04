@@ -1,0 +1,18 @@
+name: py_trees
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.6.7=h357f687_1006
+  - pip=21.3.1=pyhd8ed1ab_0
+  - git=2.35.0=pl5321hc30692c_0
+  - numpy=1.19.5=py36hfc0c790_2
+  - pandas=1.1.5=py36h284efc9_0
+  - scipy=1.5.3=py36h81d768a_1
+  - pysam=0.18.0=py36h05faf87_0
+  - matplotlib=3.3.4=py36h5fab9bb_0
+  - ete3=3.1.2=pyh9f0ad1d_0
+  - click=8.0.1=py36h5fab9bb_0
+  - joblib
+  - pip:
+    - git+https://github.com/mparker2/matplotlib_logo.git

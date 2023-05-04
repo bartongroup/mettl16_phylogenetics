@@ -1,0 +1,44 @@
+comps:
+  eukaryota:
+    Aureococcus_anophagefferens: aano_mettl16
+    Aspergillus_nidulans: anid_mettl16
+    Arabidopsis_thaliana: arath_fiona1
+    Caenorhabditis_elegans: cele_mett10
+    Cryptococcus_neoformans: cneo_mettl16
+    Cryptosporidium_parvum: cpar_mettl16
+    Chlamydomonas_reinhardtii: crei_mettl16
+    Dictyostelium_discoideum: ddis_mettl16
+    Drosophila_melanogaster: dmel_mettl16
+    Danio_rerio: drer_mettl16
+    Gallus_gallus: ggal_mettl16
+    Galdieria_sulphuraria: gsul_mettl16
+    Homo_sapiens: hsap_mettl16
+    Lipomyces_starkeyi: lsta_mettl16
+    Marchantia_polymorpha: mpol_mettl16
+    Neurospora_crassa: ncra_mettl16
+    Oryza_sativa: osat_mettl16
+    Ostreococcus_tauri: otau_mettl16
+    Plasmodium_falciparum: pfal_mettl16
+    Phytophthora_infestans: pinf_mettl16
+    Pneumocystis_jirovecii: pjir_mettl16
+    Physcomitrium_patens: ppat_mettl16
+    Paramecium_tetraurelia: ptet_mettl16
+    Schizosaccharomyces_pombe: spomb_mtl16
+    Toxoplasma_gondii: tgon_mettl16
+    Thalassiosira_pseudonana: tpseu_mettl16
+    Trichoplax_adhaerens: triad_mettl16
+    Ustilago_maydis: umay_mettl16
+    Yarrowia_lipolytica: ylip_mettl16
+  saccharomycotina:
+    Caenorhabditis_elegans: cele_mett10
+    Cryptococcus_neoformans: cneo_mettl16
+    Eremothecium_cymbalariae: ecym_mettl16
+    Eremothecium_gossypii: egos_mettl16
+    Homo_sapiens: hsap_mettl16
+    Schizosaccharomyces_pombe: spomb_mtl16
+    Zygosaccharomyces_parabailli: zpba_mettl16
+
+reference_xray_structures:
+  mtd: hsap_mettl16_mtd_xray
+  vcr: hsap_mettl16_vcr_xray
+  ka1: hsap_tut1_ka1_xray

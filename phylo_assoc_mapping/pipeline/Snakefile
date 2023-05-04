@@ -1,0 +1,47 @@
+configfile: 'config.yaml'
+include: '../rules/splice_juncs.snakefile'
+include: '../rules/annotate.snakefile'
+include: '../rules/reannotate.snakefile'
+include: '../rules/orthologs.snakefile'
+include: '../rules/snrnas.snakefile'
+
+CLADE = config['clade']
+SPECIES = glob_wildcards(f'../../annotations/{CLADE}/genomic/{{species}}.fa').species
+
+rule all:
+    input:
+        'orthogroups/orthogroups_n0.tsv',
+        'orthogroups/species_tree_rooted.txt',
+        'orthogroups/species_tree_confidences.txt',
+        'key_prot_ogs/orthogroups/orthogroups_n0.tsv',
+        'key_prot_ogs/all_hmm_hits.tsv',
+        expand(
+            'pssms/{species}.{signal_type}.tsv',
+            species=SPECIES,
+            signal_type=['5ss']
+        ),
+        expand(
+            'figures/{signal_type}.{phenotype}.{figtype}.svg',
+            signal_type='5ss',
+            phenotype=['p4AtoU', 'p3GtoA', 'p5GtoH', 'm1GtoH', 'p4StoW'],
+            figtype=['phenogram', 'volcano']
+        ),
+        expand(
+            'figures/{signal_type}.{figtype}_phenotype_variation.svg',
+            signal_type='5ss',
+            figtype=['pairwise', 'ambig_base']
+        ),
+        expand(
+            'figures/{og_id}.{signal_type}.{phenotype}.phmm_pgls_stemplot.svg',
+            og_id=[og_id for og_id in config['plot_ogs'] if os.path.exists(f'../../annotations/hmms/{og_id}.hmm')],
+            signal_type='5ss',
+            phenotype=['p4AtoU', 'p3GtoA', 'p5GtoH', 'm1GtoH', 'p4StoW']
+        ),
+        expand(
+            'figures/{snrna}_aln.svg',
+            snrna=['u6', 'u1_stem1']
+        ),     
+        expand(
+            'figures/u56rho.{figtype}.svg',
+            figtype=['scatter', 'volcano']
+        )

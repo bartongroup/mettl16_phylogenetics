@@ -1,0 +1,18 @@
+import os
+
+configfile: 'config.yaml'
+
+include: '../rules/struct_bioinfo.snakefile'
+
+
+rule all:
+    input:
+        expand(
+            'figures/{comp}.tmscore_{figtype}.svg',
+            comp=config['comps'].keys(),
+            figtype=['heatmap', 'boxplot'],
+        ),
+        expand(
+            'figures/{comp}.domain_struct_tree.svg',
+            comp=[c for c in config['comps'].keys() if os.path.exists(f'trees/{c}.txt')]
+        )

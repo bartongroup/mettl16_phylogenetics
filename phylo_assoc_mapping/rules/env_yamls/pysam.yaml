@@ -1,0 +1,11 @@
+name: nb_seqlogos
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.6.7=h357f687_1006
+  - numpy=1.19.5=py36hfc0c790_2
+  - pandas=1.1.5=py36h284efc9_0
+  - scipy=1.5.3=py36h81d768a_1
+  - pysam=0.18.0=py36h05faf87_0
+  - click
